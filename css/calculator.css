@@ -1,0 +1,430 @@
+/* HEADER */
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #210038;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+}
+
+header a img{
+    height: 100%;
+    padding-left: 30px;
+}
+
+header h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    padding-right: 30px;
+    font-size: 25px;
+}
+
+/* BODY MAIN */
+#error-msg {
+    color: rgb(255, 67, 67);
+    font-size: 1em;
+}
+
+main {
+    margin: auto;
+    width: 55%;
+    max-width: 800px;
+    width: 90%;
+    color: black;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+
+main h2 {
+    font-size: 30px;
+}
+
+main h3 {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+main p {
+    font-size: 20px;
+}
+
+#stats-result p {
+    font-size: 15px;
+    line-height: 1.5em;
+    padding-left: 30px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden; 
+}
+
+.sub-operation{
+    padding-left: 25px;
+}
+
+.operation {
+    padding-bottom: 20px;
+    overflow: auto; /* Activa el scroll */
+    scrollbar-width: thin; /* Compatible con Firefox */
+    scrollbar-color: #4C0080 transparent; /* Compatible con Firefox */
+}
+
+.operation::-webkit-scrollbar {
+    width: 10px;
+}
+
+.operation::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.operation::-webkit-scrollbar-thumb {
+    background: #4C0080;
+    border-radius: 5px;
+}
+
+main #stats-options {
+    width: 100%;
+    display: flex;
+    align-items:flex-end;
+    border-radius: 5px;
+}
+
+main #stats-options .type-stats {
+    background-color: #4C0080;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 18px;
+
+    width: 50%;
+    padding: 10px;
+}
+
+main #stats-options .selected {
+    width: 55%;
+    height: 45px;
+    transition: 0.5s;
+}
+
+main #stats-options .no-selected {
+    opacity: 0.5;
+    width: 45%;
+    transition: 0.5s;
+}
+
+.instruction {
+    font-size: 18px;
+}
+
+#datos-sueltos-input {
+    width: 100%;
+    padding: 10px;
+    background: rgb(216, 216, 216);
+    border-radius: 10px;
+    min-height: 130px;
+    margin-bottom: 10px;
+    border: 0px;
+    font-weight: 300;
+}
+
+textarea {
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    resize: none;
+    border: 0px;
+}
+
+textarea:hover, 
+textarea:focus,
+textarea:active,
+textarea:visited,
+textarea:disabled{
+    box-shadow: 0px; 
+    outline: 0px;
+    border: 0px;
+}
+
+#to-agroup-data {
+    margin-bottom: 20px;
+}
+
+.calcular {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+
+    display: block;
+    margin:auto;
+
+    background-color: #4C0080;
+    color: white;
+
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#calcular:hover {
+    scale: 1.05;
+    transition: 0.3s;
+}
+
+.type-stats {
+    color: white;
+    background-color: #210038;
+}
+
+.graphic {
+    width: 100%;
+    height: 500px;
+}
+
+.MathJax {
+    font-size: 1.7em !important; 
+}
+
+#frecuencies-table {
+    display: flex;
+}
+
+#frecuencies-table .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    min-height: 50px;
+}
+
+#frecuencies-table .column p {
+    margin: 0;
+    font-size: 14px;
+    color: #000000; /* Color de texto */
+    padding: 1px !important;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#frecuencies-table .column p:first-child {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    background-color: #4C0080;
+    padding: 5px;
+    border-left: 1px solid #ccc;
+}
+
+#frecuencies-table .column p .MathJax{
+    font-size: 1em !important;
+}
+
+#frecuencies-table .column p:first-child .MathJax{
+    font-size: 1em !important;
+}
+
+/* Frecuencies Table */
+#type-frecuencies-table-input {
+    width: 100%;
+    background-color: #ccc;
+    text-align: center;
+    border: none;
+    padding: 5px;
+}
+
+#type-frecuencies-table-input:hover, 
+#type-frecuencies-table-input:focus,
+#type-frecuencies-table-input:active,
+#type-frecuencies-table-input:visited,
+#type-frecuencies-table-input:disabled{
+    box-shadow: 0px; 
+    outline: 0px;
+    border: 0px;
+}
+
+#type-frecuencies-table-input option{
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+}
+
+.type-frecuencies-table div{
+    display: flex;
+    gap: 3px;
+    position: relative;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.type-frecuencies-table .column {
+    width: 50%;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.type-frecuencies-table .column p {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    background-color: #4C0080;
+    padding: 5px;
+    text-align: center;
+    margin: 0px;
+}
+
+.type-frecuencies-table .column div {
+    margin: 0px;
+}
+
+.type-frecuencies-table .column div button{
+    transition: 0.2s;
+    scale: 0;
+}
+
+.type-frecuencies-table .column div:hover button{
+    scale: 1;
+}
+
+.type-frecuencies-table .column div button{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.type-frecuencies-table .column div .add-row{
+    background-color: rgb(92, 255, 67);
+    left: 30px;
+}
+
+.type-frecuencies-table .column div .delete-row{
+    background-color: rgb(255, 69, 69);
+
+}
+
+.type-frecuencies-table .column textarea {
+    font-size: 18px;
+    text-align: center;
+    background: rgb(216, 216, 216);
+    height: 26px;
+    margin-bottom: 3px;
+
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.type-frecuencies-table .add-row{
+    background-color: #3fff42;
+    color: white;
+    cursor: pointer;
+    border: none !important;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.type-frecuencies-table .delete-row{
+    background-color: #ff3f3f;
+    color: white;
+    cursor: pointer;
+    border: none !important;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% + 20px);
+    top: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.type-frecuencies-table .interval-input {
+    display: flex;
+    margin: 0px;
+}
+
+.type-frecuencies-table .interval-input p {
+    font-weight: 500;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    margin: 0px;
+    background-color: transparent;
+    scale: 1.3;
+}
+.opacity {
+    opacity: 50%;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: #210038;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer div{
+    flex: 1 1 48%;
+    box-sizing: border-box;   
+}
+
+footer div h1, footer div p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#owner-info {
+    padding: 15px;
+}
+
+#social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#social-media a {
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 60px;
+    display: flex;
+}
+
+#social-media a:hover img{
+    scale: 1.3;
+}
+
+#social-media a img {
+    filter: invert(100%);
+    width: 100%;
+    transition: 0.2s;
+}
+
+#about {
+    padding: 15px;
+}
+

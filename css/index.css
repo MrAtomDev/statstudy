@@ -1,0 +1,127 @@
+main {
+    position: relative;
+    transform: translate(0, -50%);
+    top: 50%;
+    padding-left: 100px;
+}
+
+main h1 {
+    font-size: 80px;
+    margin: 0px;
+}
+
+main p {
+    font-size: 30px;
+    font-weight: 300;
+    width: 100vh
+}
+
+#bars {
+    opacity: 60%;
+    display: flex;
+    
+    position: fixed;
+    left: 100%;
+    transform: translate(-100%, 0) rotate(-200deg);
+}
+
+#bars div {
+    width: 20vh;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#bar-1 {
+    background-color: #B080FF;
+    height: 140vh;
+    animation: float 1.5s ease-out normal;
+}
+
+#bar-2 {
+    background-color: #80FFC2;
+    height: 120vh;
+    animation: float 1.5s ease-out normal;
+}
+
+#bar-3 {
+    background-color: #FF80A6;
+    height: 140vh;
+    animation: float 2.7s ease-out normal;
+}
+
+#bar-4 {
+    background-color: #80D9FF;
+    height: 145vh;
+    animation: float 2s ease-out normal;
+}
+
+#start-btn {
+    text-decoration: none;
+    background-color: #6400AA;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+    border-radius: 10px;
+    animation: btn-start 1s ease-in-out normal;
+    width: 100vh;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, -1000px);
+    }
+    60% {
+        transform: translate(0, 55px);
+    }
+    80% {
+        transform: translate(0, -15px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes btn-start {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        background-color: #6400AA;
+        transform: translate(0, 0px);
+     }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+        padding: 5px;
+    }
+
+    main h1{
+        width: 90%;
+        padding: 5px;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    main p{
+        width: 90%;
+        padding: 5px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #start-btn{
+        width: 90%;
+        margin: auto;
+    }
+
+    #bars {
+        transform: translate(-70%, 0) rotate(-200deg);
+    }
+}
